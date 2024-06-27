@@ -13,11 +13,9 @@
     PeepPeaHotel
 
     - GET Rooms
-
     http://localhost:8080/api/rooms
 
     - GET Room 7
-    
     http://localhost:8080/api/rooms
 
     - GET Guests
@@ -25,3 +23,6 @@
 
     - GET Guest 33
     http://localhost:8080/api/guests/33
+
+    -GET Reservation
+    http://localhost:8080/api/reservations
