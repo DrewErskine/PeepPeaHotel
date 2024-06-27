@@ -11,6 +11,7 @@
 ## PostMan
 
     PeepPeaHotel
+
     - GET Rooms
 
     http://localhost:8080/api/rooms
@@ -18,3 +19,9 @@
     - GET Room 7
     
     http://localhost:8080/api/rooms
+
+    - GET Guests
+    http://localhost:8080/api/guests
+
+    - GET Guest 33
+    http://localhost:8080/api/guests/33
