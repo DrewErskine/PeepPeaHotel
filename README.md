@@ -115,8 +115,6 @@ The **data** package is responsible for interacting with the database. It contai
 
 The **PeepPeaHotel** project follows a layered architecture with clear separation between the web layer (controllers), service layer (business logic), and data layer (repositories and entities). The controllers handle HTTP requests, delegate the business logic to services, and interact with repositories to fetch or modify data in the database. The service layer processes the business logic for reservations and room availability, while the data layer manages the persistence of guest, room, and reservation information.
 
-This documentation provides a high-level understanding of the project structure and the functionality of each key component.
-
 
 ## To Start Docker
 
