@@ -1,4 +1,4 @@
-# PeepPeaHotel Project Documentation
+# PeepPeaHotel System Documentation
 
 ## Overview
 
@@ -116,31 +116,39 @@ The **data** package is responsible for interacting with the database. It contai
 The **PeepPeaHotel** project follows a layered architecture with clear separation between the web layer (controllers), service layer (business logic), and data layer (repositories and entities). The controllers handle HTTP requests, delegate the business logic to services, and interact with repositories to fetch or modify data in the database. The service layer processes the business logic for reservations and room availability, while the data layer manages the persistence of guest, room, and reservation information.
 
 
-## To Start Docker
+## How to Run the Project
 
-1. docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=local -d -p 5432:5432 -e PGDATA=/var/lib/postgresql/data/pgdata -v "${env:USERPROFILE}\.local\docker\postgresql\data:/var/lib/postgresql/data" postgres
+### Starting the PostgreSQL Database with Docker
+
+To start a PostgreSQL container using Docker, run the following command:
+
+```bash docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=local -d -p 5432:5432 -e PGDATA=/var/lib/postgresql/data/pgdata -v "${env:USERPROFILE}.local\docker\postgresql\data:/var/lib/postgresql/data" postgres```
+
+Once Docker is running, change the character set:
+```chcp 1252```
+
+You can access the PostgreSQL database using the following command:
+```psql -h localhost -p 5432 -U postgres -d local```
+
+After connecting to the database, you can list the tables using:
+```\dt lil.*```
 
 
-2. chcp 1252
-3. psql -h localhost -p 5432 -U postgres -d local
-4. \dt lil.*
+## API Endpoints
 
+You can use **Postman** or a similar API tool to interact with the PeepPeaHotel API. Below are some example endpoints:
 
-## PostMan
+- **GET all rooms**  
+  URL: `http://localhost:8080/api/rooms`
+  
+- **GET a specific room (e.g., Room with ID 7)**  
+  URL: `http://localhost:8080/api/rooms/7`
 
-    PeepPeaHotel
+- **GET all guests**  
+  URL: `http://localhost:8080/api/guests`
 
-    - GET Rooms
-    http://localhost:8080/api/rooms
+- **GET a specific guest (e.g., Guest with ID 33)**  
+  URL: `http://localhost:8080/api/guests/33`
 
-    - GET Room 7
-    http://localhost:8080/api/rooms
-
-    - GET Guests
-    http://localhost:8080/api/guests
-
-    - GET Guest 33
-    http://localhost:8080/api/guests/33
-
-    -GET Reservation
-    http://localhost:8080/api/reservations
+- **GET all reservations**  
+  URL: `http://localhost:8080/api/reservations`
