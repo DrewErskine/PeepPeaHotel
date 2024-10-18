@@ -1,5 +1,11 @@
 # PeepPeaHotel System Documentation
 
+## Demo Video
+
+To see a demo of how PeepPeaHotel works, watch the video below:
+
+[![PeepPeaHotel Demo](https://img.youtube.com/vi/Lqp-KGu-j2Q/0.jpg)](https://www.youtube.com/watch?v=Lqp-KGu-j2Q&ab_channel=Luf)
+
 ## Overview
 
 PeepPeaHotel is a hotel management application that allows users to manage rooms, reservations, and guest data. The system includes functionality for viewing available rooms, making reservations, and tracking occupancy on specific dates. This documentation provides an overview of the core files and their responsibilities in the `web`, `service`, and `data` packages.
