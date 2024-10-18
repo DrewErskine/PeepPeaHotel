@@ -2,7 +2,7 @@
 
 ## Demo Video
 
-To see a demo of how PeepPeaHotel works, watch the video below:
+A demo of how PeepPeaHotel works:
 
 [![PeepPeaHotel Demo](https://img.youtube.com/vi/Lqp-KGu-j2Q/0.jpg)](https://www.youtube.com/watch?v=Lqp-KGu-j2Q&ab_channel=Luf)
 
@@ -14,11 +14,11 @@ PeepPeaHotel is a hotel management application that allows users to manage rooms
 
 ## Web Layer
 
-The **web** package contains both **API controllers** and **normal controllers** that handle HTTP requests and responses. 
+The **web** package contains both **API controllers** and **view controllers** that handle HTTP requests and responses. 
 
-### Difference Between API Controllers and Normal Controllers:
+### Difference Between API Controllers and View Controllers:
 - **API Controllers**: Provide RESTful endpoints, typically returning JSON responses and are used for external interactions (e.g., with a front-end or third-party services).
-- **Normal Controllers**: Render HTML views using server-side templates, used to return fully rendered pages to be viewed in a browser.
+- **View Controllers**: Render HTML views using server-side templates, used to return fully rendered pages to be viewed in a browser.
 
 ### API Controllers
 
@@ -40,7 +40,7 @@ These controllers expose endpoints for performing CRUD (Create, Read, Update, De
    - Handles `GET /api/rooms`, `POST /api/rooms`, and `GET /api/rooms/{id}`.
    - Returns JSON data about room information and interacts with the `RoomRepository`.
 
-### Normal Controllers
+### View Controllers
 
 These controllers are responsible for rendering views in the browser using server-side templates. They return fully rendered HTML pages and are typically used in server-side rendered web applications.
 
